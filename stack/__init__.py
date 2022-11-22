@@ -1,4 +1,4 @@
-class EmptyStackError:
+class EmptyStackError(Exception):
     pass
 
 
@@ -11,7 +11,7 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            raise EmptyStackError()
+            raise EmptyStackError
         return self._stack.pop()
     
     def push(self, item):
@@ -22,7 +22,7 @@ class Stack:
     
     def peek(self):
         if self.is_empty():
-            raise EmptyStackError()
+            raise EmptyStackError
         return self._stack[Stack.TOP]
 
     
